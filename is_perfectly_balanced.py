@@ -25,6 +25,3 @@ def is_perfectly_balanced(input_str):
             
     print('YES')
     return True
-is_perfectly_balanced('abc')
-is_perfectly_balanced('abcc')
-is_perfectly_balanced('abcddeee')
