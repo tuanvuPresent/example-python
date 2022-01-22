@@ -10,13 +10,13 @@ def is_perfectly_balanced(input_str):
         else:
             count_index[i] = 1
     
-    min_time  = min(list(count_index.values()))
+    max_time = max(list(count_index.values()))
     different_count = 0
     for value in count_index.values():
-        if value != min_time and value - min_time > 1:
+        if value != max_time and value != 1:
             print('NO')
             return False
-        if value != min_time and value - min_time == 1:
+        if value != max_time and value == 1:
             different_count += 1
         
         if different_count == 2:
