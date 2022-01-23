@@ -8,13 +8,13 @@ def is_perfectly_balanced(input_str):
     
     max_time = max(list(count_index.values()))
     min_time = min(list(count_index.values()))
-    if list(count_index.values()).count(max_time) == len(list(count_index.values())) \
-        or list(count_index.values()).count(max_time) == len(list(count_index.values())) - 1 and min_time == 1:
+    count_max = list(count_index.values()).count(max_time)
+    count_min = list(count_index.values()).count(min_time)
+    if count_max == len(list(count_index.values())) or count_max == len(list(count_index.values())) - 1 and min_time == 1:
         print('YES')
         return True
             
-    if list(count_index.values()).count(min_time) == len(list(count_index.values())) \
-        or list(count_index.values()).count(min_time) == len(list(count_index.values())) - 1 and max_time - 1 == min_time:
+    if count_min == len(list(count_index.values())) or count_min == len(list(count_index.values())) - 1 and max_time - 1 == min_time:
         print('YES')
         return True
     
